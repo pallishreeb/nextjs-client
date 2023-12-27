@@ -25,7 +25,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
-        <img className="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature"/>
+        <img className="mx-auto sm:max-w-sm lg:max-w-full" src="./images/d.png" alt="feature"/>
         </div>
     </div>
   </div>
@@ -37,7 +37,7 @@ const About: React.FC = () => {
     <div className="box-border flex flex-col items-center content-center px-8 mx-auto leading-6 text-black border-0 border-gray-300 border-solid md:flex-row max-w-7xl lg:px-16">
 
         <div className="box-border relative w-full max-w-md px-4 mt-5 mb-4 -ml-5 text-center bg-no-repeat bg-contain border-solid md:ml-0 md:mt-0 md:max-w-none lg:mb-0 md:w-1/2 xl:pl-10">
-            <img src="https://cdn.devdojo.com/images/december2020/productivity.png" className="p-2 pl-6 pr-5 xl:pl-16 xl:pr-20 "/>
+            <img src="./images/c.png" className="p-2 pl-6 pr-5 xl:pl-16 xl:pr-20 "/>
         </div>
 
         <div className="box-border order-first w-full text-black border-solid md:w-1/2 md:pl-10 md:order-none">

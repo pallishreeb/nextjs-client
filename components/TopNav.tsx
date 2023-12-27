@@ -7,7 +7,9 @@ export const TopNav: React.FC = () => {
         <div className="container mx-auto flex justify-between items-center">
           {/* Brand Name */}
           <Link href="/" legacyBehavior>
-            <a className="font-bold text-xl">CG</a>
+            <a className="font-bold text-xl">
+              <img src="./images/cg.png" alt="cg-logo" width={40} height={35} />
+            </a>
           </Link>
   
           {/* Contact Information (Text for larger screens, Icons for smaller screens) */}

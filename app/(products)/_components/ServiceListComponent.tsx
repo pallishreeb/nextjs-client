@@ -8,26 +8,22 @@ interface ProductListComponentProps {
 const ServiceListComponent: React.FC<ProductListComponentProps> = () => {
   // Sample data for products
   const products = [
-    { id: 1, name: "Product 1", price: "$20" },
-    { id: 2, name: "Product 2", price: "$30" },
-    { id: 3, name: "Product 3", price: "$25" },
-    { id: 4, name: "Product 4", price: "$15" },
-    { id: 5, name: "Product 5", price: "$40" },
+    { id: 1, name: "Product 1", price: "$20" , img: 'https://www.cgglobal.com/admin/uploads/product_images/p3.png'},
+    { id: 2, name: "Product 2", price: "$30", img:'https://www.cgglobal.com/admin/uploads/Generators_alternators1.png' },
+    { id: 3, name: "Product 3", price: "$25" , img:'https://www.cgglobal.com/admin/uploads/fan_1.png'},
+    { id: 4, name: "Product 4", price: "$15",img:'https://www.cgglobal.com/admin/uploads/Brushless_Small_Generator_26122721.jpg' },
     // Add more products as needed
   ];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {products.map((product) => (
        <div className="max-w-2xl mx-auto" key={product.id}>
     
-       <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+       <div className="bg-white">
        <Link href="/services/[id]" as="/services/1" legacyBehavior >
-           <a href="#">
-            
-               <img className="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="product thumbnail" />
-           </a>
-           </Link>
+          <img className="rounded-t-lg w-full h-full " src={product.img} alt="product thumbnail" />
+      </Link>
            <div className="p-5">
            <Link href="/services/[id]" as="/services/1" legacyBehavior >
                <a href="#">

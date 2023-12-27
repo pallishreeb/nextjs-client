@@ -9,7 +9,7 @@ interface ProductDetailsPageProps {
 const ProductDetailsPage: React.FC<ProductDetailsPageProps> = () => {
   // Sample data for product details
   const productDetails = {
-    image: "https://flowbite.com/docs/images/blog/image-1.jpg",
+    image: "https://5.imimg.com/data5/SELLER/Default/2023/10/353549819/YD/GP/GA/99432398/11kw-crompton-cg-ie3-tefc-greaves-motor-500x500.jpg",
     brand: "Example Brand",
     modelNumber: "123ABC",
     features: [
@@ -35,20 +35,28 @@ const ProductDetailsPage: React.FC<ProductDetailsPageProps> = () => {
         </div>
 
         {/* Right side - Product Details */}
-        <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4 border p-4">
+        <div className="md:w-1/2 mt-4 md:mt-0 md:ml-4 p-4">
         <h1 className="text-2xl font-bold mb-2">{productDetails.productName}</h1>
           <h2 className="text-xl font-semibold mb-4">{productDetails.brand}</h2>
           <p className="text-gray-700 mb-2">Model Number: {productDetails.modelNumber}</p>
-          
+          <p className="text-gray-700 mb-4">{productDetails.productDescription}</p>
+          {/* Download Button for Document */}
+          <div className="mt-1">
+          <p className="font-semibold mb-2">Download Document:</p>
+          <a href={productDetails.document} className="text-blue-500 hover:underline block mb-2">
+            {productDetails.productName} Document
+          </a>
+          <Modal/>
+        </div>
           {/* List of Features */}
-          <ul className="lg:w-1/2 bg-gray-300">
+          {/* <ul className="lg:w-1/2 bg-gray-300">
           {productDetails.features.map((feature, index) => (
               <li key={index} className="border p-2 lg:flex lg:justify-between">
                 <span className="font-semibold lg:w-1/3">{feature.key}:</span>
                 <span className="lg:w-2/3">{feature.value}</span>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       </div>
 
@@ -57,18 +65,15 @@ const ProductDetailsPage: React.FC<ProductDetailsPageProps> = () => {
 
       {/* Bottom Section */}
       <div className="mt-4">
-        <p className="text-gray-700 mb-4">{productDetails.productDescription}</p>
-
-        {/* Download Button for Document */}
-        <div className="mb-4">
-          <p className="font-semibold mb-2">Download Document:</p>
-          <a href={productDetails.document} className="text-blue-500 hover:underline block mb-2">
-            {productDetails.productName} Document
-          </a>
-
-      <Modal/>
-
-        </div>
+        <h4 className="text-xl semibold">Features of the Product</h4>
+        <ul className="lg:w-1/3 bg-gray-300">
+          {productDetails.features.map((feature, index) => (
+              <li key={index} className="border p-2 lg:flex ">
+                <span className="font-semibold lg:w-1/3">{feature.key}:</span>
+                <span className="lg:w-2/3">{feature.value}</span>
+              </li>
+            ))}
+          </ul> 
       </div>
     </div>
   );

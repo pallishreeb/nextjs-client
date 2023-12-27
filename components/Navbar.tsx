@@ -78,8 +78,8 @@ const Navbar: React.FC = () => {
 
           {/* Navbar Links for small screens */}
           <div
-            className={`lg:hidden absolute  top-16 left-0 bg-gray-200 w-full transition-all ease-out duration-300 overflow-hidden ${
-              isMenuOpen ? "flex justify-center align-item mt-3" : "hidden"
+            className={`lg:hidden absolute  top-16 left-0 bg-gray-100 w-full transition-all ease-out duration-300 overflow-hidden ${
+              isMenuOpen ? "flex justify-center align-item mt-8" : "hidden"
             }`}
           >
             <div className="mt-2">
