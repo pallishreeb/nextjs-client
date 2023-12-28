@@ -32,8 +32,9 @@ const FilterComponent: React.FC<FilterComponentProps> = () => {
         <input
           type="text"
           placeholder="Search..."
-          className="w-full p-2 border rounded-md mb-2"
+          className="w-full p-2 border  mb-2"
           value={searchTerm}
+          style={{borderRadius: "25px"}}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <h3 className="text-md font-semibold mb-2">Categories</h3>

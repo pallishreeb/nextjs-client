@@ -83,18 +83,18 @@ const Navbar: React.FC = () => {
             }`}
           >
             <div className="mt-2">
-              <Link href="/" legacyBehavior>
-                <a className="block mb-2">Requirements</a>
-              </Link>
               <Link href="/products" legacyBehavior>
                 <a className=" block mb-2">Products</a>
               </Link>
               <Link href="/services" legacyBehavior>
                 <a className="block mb-2">Services</a>
               </Link>
-              <Link href="/testimonials" legacyBehavior>
-                <a className=" block mb-2">Query</a>
-              </Link>
+              <DropdownMenu>
+              <DropdownMenuTrigger>Requirements</DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {productTypes.map((p) => (<DropdownMenuItem key={p.name}><Link href={`/requirements/${p.name}`}>{p.name}</Link></DropdownMenuItem> ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             </div>
           </div>
 

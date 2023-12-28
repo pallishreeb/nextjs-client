@@ -62,7 +62,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({formType}) => {
 
   return (
     <>
-      <form className="my-4 mx-auto max-w-md lg:max-w-lg xl:max-w-xl" onSubmit={handleSubmit}>
+      <form className="my-4 mx-2 lg:mx-auto max-w-md lg:max-w-lg xl:max-w-xl" onSubmit={handleSubmit}>
         {/* Constant fields */}
         {filteredFields.length > 0 &&
         <>

@@ -25,21 +25,25 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, imageSrc, price, brand,
 
         {/* Model, Brand, Features */}
         <div className="w-1/2 pl-4">
-          <p className="text-gray-700">
-            <span className="font-semibold">Brand:</span> {brand}
+        <p className="text-gray-700">
+           {brand}
           </p>
           <p className="text-gray-700">
-            <span className="font-semibold">Model:</span> {model}
+           {model}
           </p>
+          <p className="text-gray-700">
+            {price}
+          </p>
+       
           {/* Add more details as needed */}
 
           {/* Features */}
-          <div className="mt-2">
-            <p className="text-gray-700 font-semibold">Features:</p>
-            <ul className="list-disc pl-4">
+          <div>
+            {/* <p className="text-gray-700 font-semibold">Features:</p> */}
+            <ul className="list-none">
               {features.map((feature, index) => (
-                <li key={index} className="text-gray-700">
-                  {feature}
+                <li  key={index} className="text-gray-700">
+                  {feature} : Value
                 </li>
               ))}
             </ul>

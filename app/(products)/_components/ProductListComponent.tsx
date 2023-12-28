@@ -25,7 +25,7 @@ const ProductListComponent: React.FC<ProductListComponentProps> = () => {
             name={product.name}
             imageSrc={product.imageSrc}
             price={product.price}
-            brand="Sample Brand" // Add your actual brand and model data
+            brand="Brand" // Add your actual brand and model data
             model="Sample Model"
             features={['Feature 1', 'Feature 2', 'Feature 3']} // Add your actual features
           />
