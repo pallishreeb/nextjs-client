@@ -8,11 +8,11 @@ interface FilterComponentProps {
 
 const FilterComponent: React.FC<FilterComponentProps> = () => {
   // Sample data for categories and subcategories
-  const categories: string[] = ["Category 1", "Category 2", "Category 3"];
+  const categories: string[] = ["VARIABLE FREQUENCY DRIVE", "SOLAR VFD/CONTROLER", "PUMP MOTORS"];
   const subcategories: Record<string, string[]> = {
-    "Category 1": ["Subcategory 1A", "Subcategory 1B", "Subcategory 1C"],
-    "Category 2": ["Subcategory 2A", "Subcategory 2B", "Subcategory 2C"],
-    "Category 3": ["Subcategory 3A", "Subcategory 3B", "Subcategory 3C"],
+    "VARIABLE FREQUENCY DRIVE": ["CG EMOTRON VSS SERIES","CG EMOTRON VSM SERIES","CG EMOTRON VSX SERIES"],
+    "SOLAR VFD/CONTROLER": ["CG EMOTRON SURAJ VSR 170V DC"],
+    "PUMP MOTORS": ["Subcategory 3A", "Subcategory 3B", "Subcategory 3C"],
   };
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -27,7 +27,6 @@ const FilterComponent: React.FC<FilterComponentProps> = () => {
   return (
     <div className="p-4 border rounded-md  mx-auto md:w-full md:mx-0">
       <h2 className="text-lg font-bold mb-4">Filter</h2>
-
       <div className="mb-4">
         <input
           type="text"
@@ -44,14 +43,14 @@ const FilterComponent: React.FC<FilterComponentProps> = () => {
               <li
                 key={category}
                 className={`cursor-pointer p-2 border rounded-md ${
-                  selectedCategory === category ? "bg-blue-100" : ""
+                  selectedCategory === category ? "bg-blue-100 dark:bg-gray-900" : ""
                 }`}
                 onClick={() => handleCategoryClick(category)}
               >
                 {category}
                 {selectedCategory === category && (
                   <ul className="ml-4 mt-2">
-                    {subcategories[category].map((subCategory) => (
+                    {subcategories[category]?.map((subCategory) => (
                       <li
                         key={subCategory}
                         className="cursor-pointer p-2 border rounded-md"

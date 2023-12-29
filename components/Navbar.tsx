@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { usePathname } from "next/navigation"
 import { TopNav } from "./TopNav";
 import { SmallScreenNav } from "./SmallScreenNav";
 
@@ -30,6 +30,9 @@ const Navbar: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const pathname = usePathname()
+    // Define a function to determine if a link is active
+    const isLinkActive = (href: string) => pathname === href || pathname.includes(href);
   return (
     <>
       <TopNav />
@@ -104,13 +107,13 @@ const Navbar: React.FC = () => {
           {/* Navbar Links for large screens */}
           <div className={`hidden lg:flex space-x-4`}>
             <Link href="/products" legacyBehavior>
-              <a>Products</a>
+              <a className={`${isLinkActive("/products") ? "border-b-4 border-gray-800 text-indigo-600 dark:text-yellow-300  dark:border-gray-200" : ""}`}>Products</a>
             </Link>
             <Link href="/services" legacyBehavior>
-              <a>Services</a>
+              <a className={`${isLinkActive("/services") ? "border-b-4 border-gray-800 text-indigo-600 dark:text-yellow-300  dark:border-gray-200" : ""}`}>Services</a>
             </Link>
             <DropdownMenu>
-              <DropdownMenuTrigger>Requirements</DropdownMenuTrigger>
+              <DropdownMenuTrigger className={`${isLinkActive("/requirements") ? "border-b-4 border-gray-800 text-indigo-600 dark:text-yellow-300  dark:border-gray-200" : ""}`}>Requirements</DropdownMenuTrigger>
               <DropdownMenuContent>
                 {productTypes.map((p) => (<DropdownMenuItem key={p.name}><Link href={`/requirements/${p.name}`}>{p.name}</Link></DropdownMenuItem> ))}
               </DropdownMenuContent>

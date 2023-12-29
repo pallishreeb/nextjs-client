@@ -34,18 +34,18 @@ export function SmallScreenNav({productTypes}:any) {
           </svg>
         </Button>
       </SheetTrigger>
-      <SheetContent className="flex flex-col items-center bg-gray-900 text-white">
+      <SheetContent className="  flex flex-col h-1/2 w-full items-center bg-gray-900 text-white" side={"top"}>
         <div className="mt-2">
               <Link href="/products" legacyBehavior>
-                <a className=" block mb-2">Products</a>
+                <a className=" block mb-2 px-2 py-4 border-b border-white">Products</a>
               </Link>
               <Link href="/services" legacyBehavior>
-                <a className="block mb-2">Services</a>
+                <a className="block mb-2 px-2 py-4 border-b border-white">Services</a>
               </Link>
               <DropdownMenu>
-              <DropdownMenuTrigger>Requirements</DropdownMenuTrigger>
-              <DropdownMenuContent>
-                {productTypes.map((p:any) => (<DropdownMenuItem key={p.name}><Link href={`/requirements/${p.name}`}>{p.name}</Link></DropdownMenuItem> ))}
+              <DropdownMenuTrigger className=" block mb-2 px-2 py-4 border-b border-white">Requirements</DropdownMenuTrigger>
+              <DropdownMenuContent className="  my-6 text-right">
+                {productTypes.map((p:any) => (<DropdownMenuItem className="p-2" key={p.name}><Link href={`/requirements/${p.name}`}>{p.name}</Link></DropdownMenuItem> ))}
               </DropdownMenuContent>
             </DropdownMenu>
             </div>

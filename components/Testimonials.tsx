@@ -36,14 +36,14 @@ const Testimonials = () => {
         <p className="relative flex items-start justify-center w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">
           Dont just take our word 
         </p>
-        <h1 className="text-xl font-medium title-font text-gray-900 dark:text-gray-200 mb-4 text-center">
+        <h1 className="text-xl font-medium title-font text-gray-900  dark:text-gray-200 mb-4 text-center">
           See What People Saying
         </h1>
         <Carousel className="w-full max-w-2xl ">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index}>
-                <section className="text-gray-600 body-font">
+                <section className="text-gray-600 dark:text-gray-200 body-font">
                   <div className=" px-5 py-5 mx-auto">
                     <div className="flex flex-wrap -m-4">
                       <div className="p-4  w-full">
@@ -68,10 +68,10 @@ const Testimonials = () => {
                               className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
                             />
                             <span className="flex-grow flex flex-col pl-4">
-                              <span className="title-font font-medium text-gray-900">
+                              <span className="title-font font-medium text-gray-900 dark:text-gray-200">
                                 Holden Caulfield
                               </span>
-                              <span className="text-gray-500 text-sm">
+                              <span className="text-gray-500 dark:text-gray-400 text-sm">
                                 UI DEVELOPER
                               </span>
                             </span>
