@@ -36,7 +36,7 @@ const Testimonials = () => {
         <p className="relative flex items-start justify-center w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center">
           Dont just take our word 
         </p>
-        <h1 className="text-xl font-medium title-font text-gray-900 mb-4 text-center">
+        <h1 className="text-xl font-medium title-font text-gray-900 dark:text-gray-200 mb-4 text-center">
           See What People Saying
         </h1>
         <Carousel className="w-full max-w-2xl ">
@@ -47,7 +47,7 @@ const Testimonials = () => {
                   <div className=" px-5 py-5 mx-auto">
                     <div className="flex flex-wrap -m-4">
                       <div className="p-4  w-full">
-                        <div className="h-full bg-gray-100 p-8 rounded">
+                        <div className="h-full border p-8 rounded">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"

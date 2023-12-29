@@ -62,12 +62,12 @@ const DynamicForm: React.FC<DynamicFormProps> = ({formType}) => {
 
   return (
     <>
-      <form className="my-4 mx-2 lg:mx-auto max-w-md lg:max-w-lg xl:max-w-xl" onSubmit={handleSubmit}>
+      <form className="my-4 mx-2 container md:max-w-3xl mx-auto" onSubmit={handleSubmit}>
         {/* Constant fields */}
         {filteredFields.length > 0 &&
         <>
-        <h4 className='text-center text-white p-1 bg-gray-800'>Post your product requirement</h4>
-        <div className="grid bg-gray-100 grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-3">
+        <h4 className='text-center text-white p-1 bg-gray-800 dark:bg-gray-200 dark:text-gray-800'>Post your product requirement</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 mt-3">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
             <input
@@ -108,7 +108,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({formType}) => {
         </>
         }
         {/* Dynamic fields */}
-        <div className={`grid bg-gray-100 grid-cols-1 gap-4 lg:grid-cols-2`}>
+        <div className={`grid  grid-cols-1 gap-4 lg:grid-cols-2`}>
           {filteredFields.map((field:any, index:any) => (
             <div
               key={field.name}

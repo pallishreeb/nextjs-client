@@ -1,5 +1,6 @@
 import { Mail, PhoneCall, LocateIcon } from "lucide-react";
 import Link from "next/link";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export const TopNav: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ export const TopNav: React.FC = () => {
             <span>Email: info@example.com </span>
             <span>Phone: 123-456-7890</span>
             <span>Locations: Your Locations</span>
+            <ThemeSwitcher/>
           </div>
   
           <div className="flex lg:hidden items-center space-x-4">
@@ -33,6 +35,9 @@ export const TopNav: React.FC = () => {
             {/* Locations Icon */}
             <span className="text-xl">
              <LocateIcon/>
+            </span>
+            <span className="text-xl">
+            <ThemeSwitcher/>
             </span>
           </div>
         </div>

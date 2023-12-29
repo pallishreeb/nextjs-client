@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ name, imageSrc, price, brand, model, features }) => {
   return (
-    <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
+    <div className=" shadow-md border  rounded-lg max-w-md mx-auto transform hover:scale-105 transition-transform duration-300">
       {/* Product Name */}
       <h2 className="text-lg font-semibold m-2">{name}</h2>
 
@@ -25,13 +25,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, imageSrc, price, brand,
 
         {/* Model, Brand, Features */}
         <div className="w-1/2 pl-4">
-        <p className="text-gray-700">
+        <p className="text-gray-700 dark:text-gray-200">
            {brand}
           </p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-200">
            {model}
           </p>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-200">
             {price}
           </p>
        
@@ -42,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ name, imageSrc, price, brand,
             {/* <p className="text-gray-700 font-semibold">Features:</p> */}
             <ul className="list-none">
               {features.map((feature, index) => (
-                <li  key={index} className="text-gray-700">
+                <li  key={index} className="text-gray-700 dark:text-gray-200">
                   {feature} : Value
                 </li>
               ))}

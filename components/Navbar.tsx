@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { TopNav } from "./TopNav";
+import { SmallScreenNav } from "./SmallScreenNav";
 
 const productTypes = [
   {
@@ -32,7 +33,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       <TopNav />
-      <nav className="bg-gray-100 p-4">
+      <nav className="border-t p-4">
         <div className="container mx-auto flex justify-between items-center">
           {/* Logo or Brand */}
           <Link href="/" legacyBehavior>
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
 
           {/* Hamburger menu button for small screens */}
           <div className="lg:hidden z-10">
-            <button onClick={toggleMenu} className="focus:outline-none">
+            {/* <button onClick={toggleMenu} className="focus:outline-none">
               {isMenuOpen ? (
                 <svg
                   className="h-6 w-6"
@@ -73,7 +74,8 @@ const Navbar: React.FC = () => {
                   />
                 </svg>
               )}
-            </button>
+            </button> */}
+              <SmallScreenNav productTypes={productTypes}/>
           </div>
 
           {/* Navbar Links for small screens */}
@@ -98,6 +100,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
+          
           {/* Navbar Links for large screens */}
           <div className={`hidden lg:flex space-x-4`}>
             <Link href="/products" legacyBehavior>
@@ -115,6 +118,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </nav>
+    
     </>
   );
 };
